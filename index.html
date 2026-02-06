@@ -541,98 +541,488 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-primary">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-16">
-                Selected <span class="text-highlight">Work</span>
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1: Nightwatch.js -->
-                <div class="bg-secondary border border-gray-700 rounded-2xl overflow-hidden hover:border-highlight/50 transition-all group project-card">
-                    <div class="bg-gradient-to-br from-purple-600 to-indigo-700 h-48 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="relative z-10 text-center transform group-hover:scale-110 transition-transform duration-300">
-                            <div class="text-5xl mb-2 animate-pulse">🧪</div>
-                            <div class="text-xl font-bold">Nightwatch.js</div>
+    <!-- Experience Section -->
+    <section id="experience" class="relative py-24 bg-primary overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-40 right-20 w-96 h-96 bg-highlight/3 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-40 left-20 w-80 h-80 bg-glow/3 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-5xl lg:text-6xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">My</span>
+                    <span class="text-highlight">.</span>
+                    <span class="text-glow font-display">journey</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    From open-source contributions to enterprise blockchain solutions
+                </p>
+            </div>
+
+            <!-- Experience Timeline -->
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-highlight via-glow to-highlight transform md:-translate-x-px"></div>
+                
+                <div class="space-y-16">
+                    <!-- Current Role -->
+                    <div class="relative flex flex-col md:flex-row md:items-center">
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-8 md:left-1/2 w-4 h-4 bg-success rounded-full transform md:-translate-x-2 border-4 border-primary shadow-lg">
+                            <div class="absolute inset-0 bg-success rounded-full animate-ping opacity-75"></div>
                         </div>
-                        <!-- Floating elements -->
-                        <div class="absolute top-4 left-4 w-2 h-2 bg-white/30 rounded-full animate-ping"></div>
-                        <div class="absolute bottom-4 right-4 w-3 h-3 bg-white/20 rounded-full animate-bounce" style="animation-delay: 0.5s"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-xl font-bold">Open Source Maintainer</h3>
-                            <div class="flex items-center text-yellow-400">
-                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                </svg>
-                                <span class="text-sm font-mono">11.9k</span>
+                        
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pr-12">
+                            <div class="bg-glass backdrop-blur-xl border border-success/30 rounded-2xl p-8 hover:border-success/60 transition-all">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-3 h-3 bg-success rounded-full animate-pulse mr-3"></div>
+                                    <span class="text-success font-mono text-sm">Present</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Freelance Full-Stack Developer</h3>
+                                <div class="text-highlight font-medium mb-4">Available for Projects</div>
+                                <p class="text-gray-300 mb-4 leading-relaxed">
+                                    Building innovative web and mobile applications while maintaining critical open-source infrastructure. 
+                                    Specializing in Rust systems programming, blockchain development, and testing automation.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-success/20 text-success rounded-full text-xs">Freelance</span>
+                                    <span class="px-3 py-1 bg-glow/20 text-glow rounded-full text-xs">Full-Stack</span>
+                                    <span class="px-3 py-1 bg-highlight/20 text-highlight rounded-full text-xs">Open Source</span>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                            Leading maintainer of the popular end-to-end testing framework. 
-                            Driving innovation in test automation with 227+ commits.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs font-mono">JavaScript</span>
-                            <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs font-mono">Testing</span>
-                            <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs font-mono">Selenium</span>
+                    </div>
+
+                    <!-- Nightwatch.js Maintainer -->
+                    <div class="relative flex flex-col md:flex-row-reverse md:items-center">
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-8 md:left-1/2 w-4 h-4 bg-yellow-400 rounded-full transform md:-translate-x-2 border-4 border-primary shadow-lg"></div>
+                        
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pl-12">
+                            <div class="bg-glass backdrop-blur-xl border border-yellow-400/30 rounded-2xl p-8 hover:border-yellow-400/60 transition-all">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-yellow-400 font-mono text-sm">2019 - Present</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Lead Maintainer - Nightwatch.js</h3>
+                                <div class="text-yellow-400 font-medium mb-4">Open Source Project</div>
+                                <p class="text-gray-300 mb-4 leading-relaxed">
+                                    Leading development of one of the most popular end-to-end testing frameworks in the JavaScript ecosystem. 
+                                    Responsible for architectural decisions, code reviews, and community engagement across 227+ commits.
+                                </p>
+                                <div class="flex items-center mb-4">
+                                    <svg class="w-5 h-5 text-yellow-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                    </svg>
+                                    <span class="text-yellow-400 font-bold">11.9k+ GitHub Stars</span>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-xs">JavaScript</span>
+                                    <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs">Testing</span>
+                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">Selenium</span>
+                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs">Automation</span>
+                                </div>
+                            </div>
                         </div>
-                        <a href="https://github.com/nightwatchjs/nightwatch" class="text-highlight hover:text-red-400 transition-colors font-medium text-sm">
-                            View on GitHub →
-                        </a>
+                    </div>
+
+                    <!-- ICP/Blockchain Experience -->
+                    <div class="relative flex flex-col md:flex-row md:items-center">
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-8 md:left-1/2 w-4 h-4 bg-orange-400 rounded-full transform md:-translate-x-2 border-4 border-primary shadow-lg"></div>
+                        
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pr-12">
+                            <div class="bg-glass backdrop-blur-xl border border-orange-400/30 rounded-2xl p-8 hover:border-orange-400/60 transition-all">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-orange-400 font-mono text-sm">2020 - Present</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">Major Contributor - dolr-ai</h3>
+                                <div class="text-orange-400 font-medium mb-4">Internet Computer Ecosystem</div>
+                                <p class="text-gray-300 mb-4 leading-relaxed">
+                                    Architecting and developing enterprise-grade blockchain solutions on Internet Computer Protocol. 
+                                    Deep expertise in ICP canisters, decentralized finance, and distributed systems.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs">Internet Computer</span>
+                                    <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-xs">Rust</span>
+                                    <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-xs">DeFi</span>
+                                    <span class="px-3 py-1 bg-glow/20 text-glow rounded-full text-xs">Blockchain</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Development -->
+                    <div class="relative flex flex-col md:flex-row-reverse md:items-center">
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-8 md:left-1/2 w-4 h-4 bg-blue-400 rounded-full transform md:-translate-x-2 border-4 border-primary shadow-lg"></div>
+                        
+                        <div class="ml-16 md:ml-0 md:w-1/2 md:pl-12">
+                            <div class="bg-glass backdrop-blur-xl border border-blue-400/30 rounded-2xl p-8 hover:border-blue-400/60 transition-all">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-blue-400 font-mono text-sm">2021 - Present</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">iOS Developer - SleepMate</h3>
+                                <div class="text-blue-400 font-medium mb-4">Health & Wellness App</div>
+                                <p class="text-gray-300 mb-4 leading-relaxed">
+                                    Developing a comprehensive sleep tracking application with HealthKit integration, 
+                                    advanced analytics, and intuitive SwiftUI interfaces. Focus on user privacy and data security.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs">Swift</span>
+                                    <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs">HealthKit</span>
+                                    <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-xs">SwiftUI</span>
+                                    <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs">CoreData</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Matrix -->
+            <div class="mt-24">
+                <h3 class="text-3xl font-bold text-center mb-12">
+                    <span class="text-white">Technical</span>
+                    <span class="text-highlight">.</span>
+                    <span class="text-glow">expertise</span>
+                </h3>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Frontend -->
+                    <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-yellow-400/50 transition-all group">
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <span class="text-3xl">⚡</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Frontend</h4>
+                            <div class="space-y-1 text-sm text-gray-300">
+                                <div>React, Next.js</div>
+                                <div>TypeScript, JavaScript</div>
+                                <div>Tailwind CSS</div>
+                                <div>Three.js, WebGL</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-green-400/50 transition-all group">
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <span class="text-3xl">⚙️</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Backend</h4>
+                            <div class="space-y-1 text-sm text-gray-300">
+                                <div>Node.js, Express</div>
+                                <div>Rust, Actix</div>
+                                <div>PostgreSQL, MongoDB</div>
+                                <div>Docker, Kubernetes</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blockchain -->
+                    <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-orange-400/50 transition-all group">
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <span class="text-3xl">🔗</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Blockchain</h4>
+                            <div class="space-y-1 text-sm text-gray-300">
+                                <div>Internet Computer</div>
+                                <div>Smart Contracts</div>
+                                <div>DeFi Protocols</div>
+                                <div>Motoko, Candid</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-blue-400/50 transition-all group">
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <span class="text-3xl">📱</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2">Mobile</h4>
+                            <div class="space-y-1 text-sm text-gray-300">
+                                <div>Swift, SwiftUI</div>
+                                <div>React Native</div>
+                                <div>HealthKit, Core Data</div>
+                                <div>App Store Connect</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="relative py-24 bg-secondary overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-72 h-72 bg-glow/4 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-96 h-96 bg-highlight/4 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-5xl lg:text-6xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">Featured</span>
+                    <span class="text-highlight">.</span>
+                    <span class="text-glow font-display">work</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    A showcase of impactful projects spanning open-source, blockchain, and mobile development
+                </p>
+            </div>
+
+            <!-- Project Categories Filter -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <button class="project-filter active px-6 py-3 bg-glass backdrop-blur-xl border border-highlight/50 text-highlight rounded-full hover:border-highlight/80 transition-all font-medium" data-filter="all">
+                    All Projects
+                </button>
+                <button class="project-filter px-6 py-3 bg-glass backdrop-blur-xl border border-gray-600/50 text-gray-300 rounded-full hover:border-yellow-400/50 hover:text-yellow-400 transition-all font-medium" data-filter="open-source">
+                    Open Source
+                </button>
+                <button class="project-filter px-6 py-3 bg-glass backdrop-blur-xl border border-gray-600/50 text-gray-300 rounded-full hover:border-orange-400/50 hover:text-orange-400 transition-all font-medium" data-filter="blockchain">
+                    Blockchain
+                </button>
+                <button class="project-filter px-6 py-3 bg-glass backdrop-blur-xl border border-gray-600/50 text-gray-300 rounded-full hover:border-blue-400/50 hover:text-blue-400 transition-all font-medium" data-filter="mobile">
+                    Mobile
+                </button>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid lg:grid-cols-12 gap-8 mb-16">
+                <!-- Featured Project: Nightwatch.js -->
+                <div class="lg:col-span-8 project-card open-source" data-category="open-source">
+                    <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-3xl overflow-hidden hover:border-yellow-400/50 transition-all group h-full">
+                        <div class="relative bg-gradient-to-br from-purple-900/50 to-indigo-900/50 p-8 h-72 flex items-center justify-center overflow-hidden">
+                            <!-- Animated Background -->
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="absolute inset-0 opacity-20">
+                                <div class="grid grid-cols-8 h-full">
+                                    <div class="border-r border-purple-400/20 animate-pulse"></div>
+                                    <div class="border-r border-purple-400/20 animate-pulse" style="animation-delay: 0.2s"></div>
+                                    <div class="border-r border-purple-400/20 animate-pulse" style="animation-delay: 0.4s"></div>
+                                    <div class="border-r border-purple-400/20 animate-pulse" style="animation-delay: 0.6s"></div>
+                                    <div class="border-r border-purple-400/20 animate-pulse" style="animation-delay: 0.8s"></div>
+                                    <div class="border-r border-purple-400/20 animate-pulse" style="animation-delay: 1s"></div>
+                                    <div class="border-r border-purple-400/20 animate-pulse" style="animation-delay: 1.2s"></div>
+                                    <div class="animate-pulse" style="animation-delay: 1.4s"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="relative z-10 text-center transform group-hover:scale-105 transition-transform duration-500">
+                                <div class="text-8xl mb-4 group-hover:animate-pulse">🧪</div>
+                                <div class="text-3xl font-bold text-white mb-2">Nightwatch.js</div>
+                                <div class="text-purple-300 font-medium">End-to-End Testing Framework</div>
+                            </div>
+                            
+                            <!-- Floating Particles -->
+                            <div class="absolute top-8 left-8 w-2 h-2 bg-purple-400 rounded-full animate-ping"></div>
+                            <div class="absolute top-16 right-12 w-3 h-3 bg-indigo-400 rounded-full animate-bounce" style="animation-delay: 0.5s"></div>
+                            <div class="absolute bottom-12 left-16 w-2 h-2 bg-violet-400 rounded-full animate-pulse" style="animation-delay: 1s"></div>
+                            <div class="absolute bottom-8 right-8 w-4 h-4 bg-purple-300 rounded-full animate-ping" style="animation-delay: 1.5s"></div>
+                        </div>
+                        
+                        <div class="p-8">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-3xl font-bold text-white">Open Source Lead</h3>
+                                <div class="flex items-center space-x-4">
+                                    <div class="flex items-center text-yellow-400">
+                                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                        </svg>
+                                        <span class="font-bold">11.9k</span>
+                                    </div>
+                                    <div class="flex items-center text-green-400">
+                                        <svg class="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span class="font-bold">227+</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                                Leading maintainer of one of the most popular end-to-end testing frameworks in the JavaScript ecosystem. 
+                                Architecting robust testing solutions that empower developers worldwide to build reliable web applications.
+                            </p>
+                            
+                            <div class="flex flex-wrap gap-3 mb-6">
+                                <span class="px-4 py-2 bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 rounded-full text-sm font-medium">JavaScript</span>
+                                <span class="px-4 py-2 bg-green-500/10 border border-green-500/30 text-green-400 rounded-full text-sm font-medium">Testing</span>
+                                <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 text-blue-400 rounded-full text-sm font-medium">Selenium</span>
+                                <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/30 text-purple-400 rounded-full text-sm font-medium">WebDriver</span>
+                                <span class="px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 rounded-full text-sm font-medium">Automation</span>
+                            </div>
+                            
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/nightwatchjs/nightwatch" target="_blank" class="flex-1 bg-gradient-to-r from-yellow-500/20 to-yellow-600/20 hover:from-yellow-500/30 hover:to-yellow-600/30 border border-yellow-400/30 hover:border-yellow-400/50 text-yellow-400 px-6 py-3 rounded-xl font-semibold transition-all text-center">
+                                    <svg class="inline w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    View on GitHub
+                                </a>
+                                <a href="https://nightwatchjs.org" target="_blank" class="px-6 py-3 border border-gray-600/50 hover:border-gray-500/50 text-gray-300 hover:text-white rounded-xl font-semibold transition-all">
+                                    Visit Site →
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 2: ICP Ecosystem -->
-                <div class="bg-secondary border border-gray-700 rounded-2xl overflow-hidden hover:border-highlight/50 transition-all group">
-                    <div class="bg-gradient-to-br from-orange-600 to-red-700 h-48 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="relative z-10 text-center">
-                            <div class="text-5xl mb-2">🌐</div>
-                            <div class="text-xl font-bold">ICP Ecosystem</div>
+                <!-- Stats Card -->
+                <div class="lg:col-span-4">
+                    <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 h-full hover:border-glow/50 transition-all">
+                        <h3 class="text-2xl font-bold text-white mb-8">Open Source Impact</h3>
+                        
+                        <div class="space-y-8">
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-yellow-400 mb-2 counter" data-target="11900">0</div>
+                                <div class="text-gray-400">GitHub Stars</div>
+                                <div class="w-full bg-gray-700 rounded-full h-2 mt-2">
+                                    <div class="bg-gradient-to-r from-yellow-400 to-orange-400 h-2 rounded-full w-4/5"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-green-400 mb-2 counter" data-target="227">0</div>
+                                <div class="text-gray-400">Contributions</div>
+                                <div class="w-full bg-gray-700 rounded-full h-2 mt-2">
+                                    <div class="bg-gradient-to-r from-green-400 to-emerald-400 h-2 rounded-full w-3/5"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <div class="text-4xl font-bold text-glow mb-2">∞</div>
+                                <div class="text-gray-400">Weekly Downloads</div>
+                                <div class="w-full bg-gray-700 rounded-full h-2 mt-2">
+                                    <div class="bg-gradient-to-r from-glow to-blue-400 h-2 rounded-full w-full animate-pulse"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 p-4 bg-black/20 rounded-xl">
+                            <div class="font-mono text-xs text-glow">
+                                <div>$ npm install nightwatch</div>
+                                <div class="text-gray-400 mt-1"># Used by thousands worldwide</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Blockchain Infrastructure</h3>
-                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                            Major contributor to dolr-ai organization. Expert in developing 
-                            and scaling services on Internet Computer canisters.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-orange-500/20 text-orange-400 px-2 py-1 rounded text-xs font-mono">Internet Computer</span>
-                            <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs font-mono">Rust</span>
-                            <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs font-mono">DeFi</span>
+                </div>
+            </div>
+
+            <!-- Secondary Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- ICP Ecosystem -->
+                <div class="project-card blockchain" data-category="blockchain">
+                    <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-2xl overflow-hidden hover:border-orange-400/50 transition-all group h-full">
+                        <div class="relative bg-gradient-to-br from-orange-900/50 to-red-900/50 h-56 flex items-center justify-center overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="relative z-10 text-center transform group-hover:scale-110 transition-transform duration-300">
+                                <div class="text-6xl mb-3 group-hover:animate-spin animate-spin-slow">🌐</div>
+                                <div class="text-xl font-bold text-white">ICP Ecosystem</div>
+                            </div>
+                            <!-- Orbit Animation -->
+                            <div class="absolute inset-0 border-2 border-orange-400/20 rounded-full animate-spin-slow"></div>
+                            <div class="absolute inset-8 border border-orange-300/10 rounded-full animate-spin-slow" style="animation-direction: reverse"></div>
                         </div>
-                        <a href="https://github.com/dolr-ai" class="text-highlight hover:text-red-400 transition-colors font-medium text-sm">
-                            View Organization →
-                        </a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Blockchain Infrastructure</h3>
+                            <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                                Major contributor to dolr-ai organization, building enterprise-grade DeFi solutions on Internet Computer Protocol.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-orange-500/10 border border-orange-500/30 text-orange-400 rounded-full text-xs">Internet Computer</span>
+                                <span class="px-3 py-1 bg-red-500/10 border border-red-500/30 text-red-400 rounded-full text-xs">Rust</span>
+                                <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/30 text-purple-400 rounded-full text-xs">DeFi</span>
+                            </div>
+                            <a href="https://github.com/dolr-ai" target="_blank" class="text-orange-400 hover:text-orange-300 transition-colors font-semibold text-sm flex items-center">
+                                Explore Organization 
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 3: SleepMate -->
-                <div class="bg-secondary border border-gray-700 rounded-2xl overflow-hidden hover:border-highlight/50 transition-all group">
-                    <div class="bg-gradient-to-br from-blue-600 to-cyan-700 h-48 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20"></div>
-                        <div class="relative z-10 text-center">
-                            <div class="text-5xl mb-2">😴</div>
-                            <div class="text-xl font-bold">SleepMate</div>
+                <!-- SleepMate iOS App -->
+                <div class="project-card mobile" data-category="mobile">
+                    <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-2xl overflow-hidden hover:border-blue-400/50 transition-all group h-full">
+                        <div class="relative bg-gradient-to-br from-blue-900/50 to-cyan-900/50 h-56 flex items-center justify-center overflow-hidden">
+                            <div class="absolute inset-0 bg-black/20"></div>
+                            <div class="relative z-10 text-center transform group-hover:scale-110 transition-transform duration-300">
+                                <div class="text-6xl mb-3 group-hover:animate-bounce">😴</div>
+                                <div class="text-xl font-bold text-white">SleepMate</div>
+                            </div>
+                            <!-- Pulse Rings -->
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="absolute w-32 h-32 border border-blue-400/20 rounded-full animate-ping"></div>
+                                <div class="absolute w-24 h-24 border border-cyan-400/20 rounded-full animate-ping" style="animation-delay: 1s"></div>
+                                <div class="absolute w-16 h-16 border border-blue-300/20 rounded-full animate-ping" style="animation-delay: 2s"></div>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">iOS Health App</h3>
+                            <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                                Comprehensive sleep tracking application with HealthKit integration, advanced analytics, and beautiful SwiftUI interfaces.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/30 text-blue-400 rounded-full text-xs">Swift</span>
+                                <span class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 rounded-full text-xs">HealthKit</span>
+                                <span class="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 rounded-full text-xs">SwiftUI</span>
+                            </div>
+                            <a href="https://github.com/gravityvi/SleepMate" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors font-semibold text-sm flex items-center">
+                                View on GitHub 
+                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">iOS Health App</h3>
-                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
-                            Comprehensive sleep tracking app with HealthKit integration, 
-                            circular time pickers, and advanced analytics.
+                </div>
+
+                <!-- Additional Project Placeholder -->
+                <div class="project-card open-source" data-category="open-source">
+                    <div class="bg-glass backdrop-blur-xl border border-gray-700/50 border-dashed rounded-2xl p-8 text-center hover:border-gray-600/50 transition-all group h-full flex flex-col justify-center">
+                        <div class="text-4xl mb-4 opacity-50 group-hover:opacity-70 transition-opacity">🚧</div>
+                        <h3 class="text-xl font-bold text-gray-400 mb-2">More Projects Coming Soon</h3>
+                        <p class="text-gray-500 text-sm">
+                            Currently working on exciting new open-source contributions and innovative solutions.
                         </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs font-mono">Swift</span>
-                            <span class="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs font-mono">HealthKit</span>
-                            <span class="bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded text-xs font-mono">SwiftUI</span>
+                        <div class="mt-4">
+                            <span class="px-3 py-1 bg-gray-600/10 border border-gray-600/30 text-gray-400 rounded-full text-xs">In Development</span>
                         </div>
-                        <a href="https://github.com/gravityvi/SleepMate" class="text-highlight hover:text-red-400 transition-colors font-medium text-sm">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call-to-Action -->
+            <div class="text-center mt-20">
+                <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 max-w-2xl mx-auto">
+                    <h3 class="text-3xl font-bold text-white mb-4">Let's Build Something Amazing Together</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Ready to bring your next project to life? I specialize in creating robust, scalable solutions that make a real impact.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#contact" class="bg-gradient-to-r from-highlight to-orange-500 hover:from-orange-500 hover:to-highlight text-white px-8 py-4 rounded-xl font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-neon">
+                            Start a Project
+                        </a>
+                        <a href="https://github.com/gravityvi" target="_blank" class="border border-gray-600/50 hover:border-glow/50 text-gray-300 hover:text-white px-8 py-4 rounded-xl font-semibold transition-all">
+                            View All Work
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
                             View Project →
                         </a>
                     </div>
