@@ -36,6 +36,25 @@
                     <a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
                     <a href="#book" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700">Book Meeting</a>
                 </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
+                    <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
+                    <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-primary">Projects</a>
+                    <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-primary">Skills</a>
+                    <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
+                    <a href="#book" class="block mx-3 my-2 bg-primary text-white px-4 py-2 rounded-lg text-center hover:bg-blue-700">Book Meeting</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -51,11 +70,11 @@
                     Freelance developer specializing in iOS apps, web development, and AI integration. 
                     Let's build something amazing together.
                 </p>
-                <div class="space-x-4">
-                    <a href="#projects" class="bg-primary text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition">
+                <div class="space-x-4 flex flex-col sm:flex-row gap-4 sm:gap-0">
+                    <a href="#projects" class="bg-primary text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition text-center">
                         View Projects
                     </a>
-                    <a href="#book" class="border-2 border-primary text-primary px-8 py-3 rounded-lg text-lg hover:bg-primary hover:text-white transition">
+                    <a href="#book" class="border-2 border-primary text-primary px-8 py-3 rounded-lg text-lg hover:bg-primary hover:text-white transition text-center">
                         Book Consultation
                     </a>
                 </div>
@@ -103,7 +122,7 @@
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
                 <p class="text-xl text-gray-600">Some of my recent work</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1: Nightwatch.js -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
                     <div class="bg-gradient-to-br from-purple-500 to-indigo-600 h-48 flex items-center justify-center">
@@ -317,7 +336,7 @@
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
                 <p class="text-xl text-gray-600">Technologies I work with</p>
             </div>
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
                 <div class="text-center">
                     <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl">📱</span>
@@ -459,6 +478,12 @@
                 });
             });
         });
+        
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
     </script>
 </body>
 </html>
