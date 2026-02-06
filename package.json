@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Ravi Sawlani's Portfolio Website with Calendar Booking",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "serve": "python3 -m http.server 3000",
+    "dev": "python3 -m http.server 3000"
+  },
+  "keywords": ["portfolio", "freelancer", "developer", "calendar", "booking"],
+  "author": "Ravi Sawlani",
+  "license": "ISC"
+}
