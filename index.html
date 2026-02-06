@@ -3,326 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravi Sawlani - Full Stack Developer</title>
+    <title>Ravi Sawlani - Full-Stack Developer & Blockchain Expert</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2563eb',
-                        secondary: '#64748b'
+                        primary: '#1a1a2e',
+                        secondary: '#16213e',
+                        accent: '#0f3460',
+                        highlight: '#e94560'
+                    },
+                    fontFamily: {
+                        'mono': ['JetBrains Mono', 'Courier New', 'monospace'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
                     }
                 }
             }
         }
     </script>
-    <!-- Calendly CSS -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
+<body class="bg-primary text-white overflow-x-hidden">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <h1 class="text-2xl font-bold text-primary">Ravi Sawlani</h1>
+    <nav class="fixed top-0 w-full z-50 bg-primary/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold font-mono">
+                    <span class="text-white">ravi</span><span class="text-highlight">.</span><span class="text-gray-400">dev</span>
                 </div>
+                
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-primary">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-primary">About</a>
-                    <a href="#projects" class="text-gray-700 hover:text-primary">Projects</a>
-                    <a href="#skills" class="text-gray-700 hover:text-primary">Skills</a>
-                    <a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
-                    <a href="#book" class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700">Book Meeting</a>
+                    <a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Work</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                    <a href="#book" class="bg-highlight text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">Hire Me</a>
                 </div>
+                
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-primary">
+                    <button onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
             </div>
+            
             <!-- Mobile menu -->
-            <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div id="mobileMenu" class="hidden md:hidden bg-secondary border-t border-gray-800">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-primary">Home</a>
-                    <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-primary">About</a>
-                    <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-primary">Projects</a>
-                    <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-primary">Skills</a>
-                    <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-primary">Contact</a>
-                    <a href="#book" class="block mx-3 my-2 bg-primary text-white px-4 py-2 rounded-lg text-center hover:bg-blue-700">Book Meeting</a>
+                    <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white">Home</a>
+                    <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white">About</a>
+                    <a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-white">Work</a>
+                    <a href="#skills" class="block px-3 py-2 text-gray-300 hover:text-white">Skills</a>
+                    <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white">Contact</a>
+                    <a href="#book" class="block mx-3 my-2 bg-highlight text-white px-4 py-2 rounded-lg text-center hover:bg-red-600">Hire Me</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center">
-        <div class="max-w-7xl mx-auto px-4 py-12">
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <!-- Animated background -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent"></div>
+            <div class="absolute inset-0 opacity-10">
+                <div class="grid-pattern"></div>
+            </div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
-                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-                    Full Stack <span class="text-primary">Developer</span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                    Freelance developer specializing in iOS apps, web development, and AI integration. 
-                    Let's build something amazing together.
-                </p>
-                <div class="space-x-4 flex flex-col sm:flex-row gap-4 sm:gap-0">
-                    <a href="#projects" class="bg-primary text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition text-center">
-                        View Projects
+                <div class="mb-8">
+                    <p class="text-highlight font-mono text-lg mb-4">Hello, I'm</p>
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                        <span class="text-white">Ravi</span>
+                        <span class="text-highlight">.</span>
+                    </h1>
+                    <p class="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
+                        Open-Source Maintainer & Blockchain Expert
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-12">
+                        <span class="bg-accent/50 border border-gray-600 px-4 py-2 rounded-full text-sm font-mono">
+                            Nightwatch.js Maintainer
+                        </span>
+                        <span class="bg-accent/50 border border-gray-600 px-4 py-2 rounded-full text-sm font-mono">
+                            ICP Ecosystem Expert
+                        </span>
+                        <span class="bg-accent/50 border border-gray-600 px-4 py-2 rounded-full text-sm font-mono">
+                            Full-Stack Developer
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
+                    <a href="#projects" class="bg-highlight text-white px-8 py-4 rounded-lg text-lg hover:bg-red-600 transition-all transform hover:scale-105 font-medium">
+                        View My Work
                     </a>
-                    <a href="#book" class="border-2 border-primary text-primary px-8 py-3 rounded-lg text-lg hover:bg-primary hover:text-white transition text-center">
-                        Book Consultation
+                    <a href="#contact" class="border-2 border-gray-600 text-white px-8 py-4 rounded-lg text-lg hover:border-highlight hover:text-highlight transition-all font-medium">
+                        Get In Touch
                     </a>
                 </div>
             </div>
         </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
-                <p class="text-xl text-gray-600">Passionate developer with expertise across the full stack</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <section id="about" class="py-20 bg-secondary">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h3 class="text-2xl font-semibold mb-6">Hi, I'm Ravi!</h3>
-                    <p class="text-gray-600 mb-6">
-                        I'm a freelance full-stack developer and open-source maintainer from Bengaluru, India. 
-                        **Maintainer of Nightwatch.js** (11.9k+ stars), major contributor to dolr-ai organization, and ICP ecosystem expert with enterprise-level blockchain experience.
-                    </p>
-                    <p class="text-gray-600 mb-6">
-                        Leading contributions to critical developer tools and Web3 infrastructure. Currently maintaining Nightwatch.js testing framework, 
-                        developing production ICP canisters, and building innovative applications across mobile and blockchain platforms.
-                    </p>
-                    <div class="flex flex-wrap gap-4">
-                        <span class="bg-blue-100 text-primary px-3 py-1 rounded-full">Open Source Maintainer</span>
-                        <span class="bg-blue-100 text-primary px-3 py-1 rounded-full">ICP Ecosystem Expert</span>
-                        <span class="bg-blue-100 text-primary px-3 py-1 rounded-full">Testing Automation</span>
-                        <span class="bg-blue-100 text-primary px-3 py-1 rounded-full">Rust/Blockchain</span>
-                        <span class="bg-blue-100 text-primary px-3 py-1 rounded-full">Full-Stack</span>
+                    <h2 class="text-4xl font-bold mb-8">
+                        <span class="text-highlight">About</span> Me
+                    </h2>
+                    <div class="space-y-6 text-gray-300 leading-relaxed">
+                        <p class="text-lg">
+                            I'm a <span class="text-white font-medium">freelance full-stack developer</span> and 
+                            <span class="text-highlight font-medium">open-source maintainer</span> from Bengaluru, India.
+                        </p>
+                        <p>
+                            As a <span class="text-white font-medium">maintainer of Nightwatch.js</span> (11.9k+ stars), 
+                            I lead development of one of the most popular testing frameworks in the JavaScript ecosystem.
+                        </p>
+                        <p>
+                            I'm also a <span class="text-white font-medium">major contributor to the dolr-ai organization</span> 
+                            and have deep expertise in the <span class="text-highlight font-medium">Internet Computer ecosystem</span>, 
+                            developing and scaling services on ICP canisters at enterprise level.
+                        </p>
+                        <p>
+                            Currently building innovative applications across mobile and blockchain platforms, 
+                            with a focus on <span class="text-white font-medium">Rust systems programming</span> 
+                            and <span class="text-white font-medium">testing automation</span>.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <span class="bg-highlight/20 border border-highlight/50 text-highlight px-3 py-1 rounded-full text-sm font-mono">Open Source Leader</span>
+                        <span class="bg-blue-500/20 border border-blue-500/50 text-blue-400 px-3 py-1 rounded-full text-sm font-mono">ICP Expert</span>
+                        <span class="bg-purple-500/20 border border-purple-500/50 text-purple-400 px-3 py-1 rounded-full text-sm font-mono">Testing Automation</span>
+                        <span class="bg-orange-500/20 border border-orange-500/50 text-orange-400 px-3 py-1 rounded-full text-sm font-mono">Blockchain Systems</span>
                     </div>
                 </div>
-                <div class="bg-gray-200 rounded-lg h-80 flex items-center justify-center">
-                    <p class="text-gray-500">Professional Photo Placeholder</p>
+                
+                <div class="relative">
+                    <div class="bg-accent/50 border border-gray-600 rounded-2xl p-8 backdrop-blur-sm">
+                        <div class="font-mono text-sm text-gray-400 mb-4">~/current-status</div>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex items-center">
+                                <span class="text-green-400 mr-3">●</span>
+                                <span class="text-white">Available for freelance projects</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-blue-400 mr-3">●</span>
+                                <span class="text-white">Maintaining Nightwatch.js</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-purple-400 mr-3">●</span>
+                                <span class="text-white">Building on Internet Computer</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="text-orange-400 mr-3">●</span>
+                                <span class="text-white">Developing SleepMate iOS app</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
-                <p class="text-xl text-gray-600">Some of my recent work</p>
-            </div>
+    <section id="projects" class="py-20 bg-primary">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Selected <span class="text-highlight">Work</span>
+            </h2>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1: Nightwatch.js -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="bg-gradient-to-br from-purple-500 to-indigo-600 h-48 flex items-center justify-center">
-                        <h3 class="text-white text-2xl font-bold">🧪 Nightwatch</h3>
+                <div class="bg-secondary border border-gray-700 rounded-2xl overflow-hidden hover:border-highlight/50 transition-all group">
+                    <div class="bg-gradient-to-br from-purple-600 to-indigo-700 h-48 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="relative z-10 text-center">
+                            <div class="text-5xl mb-2">🧪</div>
+                            <div class="text-xl font-bold">Nightwatch.js</div>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3">Nightwatch.js Maintainer</h3>
-                        <p class="text-gray-600 mb-4">
-                            **Maintainer** of Nightwatch.js - popular automated testing framework 
-                            with 11.9k+ stars. Leading development of testing automation tools.
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold">Open Source Maintainer</h3>
+                            <div class="flex items-center text-yellow-400">
+                                <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                </svg>
+                                <span class="text-sm font-mono">11.9k</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                            Leading maintainer of the popular end-to-end testing framework. 
+                            Driving innovation in test automation with 227+ commits.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">JavaScript</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Testing</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Selenium</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Node.js</span>
+                            <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs font-mono">JavaScript</span>
+                            <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs font-mono">Testing</span>
+                            <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs font-mono">Selenium</span>
                         </div>
-                        <a href="https://github.com/nightwatchjs/nightwatch" class="text-primary hover:underline">View on GitHub →</a>
+                        <a href="https://github.com/nightwatchjs/nightwatch" class="text-highlight hover:text-red-400 transition-colors font-medium text-sm">
+                            View on GitHub →
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 2: SleepMate -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="bg-gradient-to-br from-purple-500 to-indigo-600 h-48 flex items-center justify-center">
-                        <h3 class="text-white text-2xl font-bold">SleepMate</h3>
+                <!-- Project 2: ICP Ecosystem -->
+                <div class="bg-secondary border border-gray-700 rounded-2xl overflow-hidden hover:border-highlight/50 transition-all group">
+                    <div class="bg-gradient-to-br from-orange-600 to-red-700 h-48 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="relative z-10 text-center">
+                            <div class="text-5xl mb-2">🌐</div>
+                            <div class="text-xl font-bold">ICP Ecosystem</div>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3">SleepMate iOS App</h3>
-                        <p class="text-gray-600 mb-4">
+                        <h3 class="text-xl font-bold mb-3">Blockchain Infrastructure</h3>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                            Major contributor to dolr-ai organization. Expert in developing 
+                            and scaling services on Internet Computer canisters.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-500/20 text-orange-400 px-2 py-1 rounded text-xs font-mono">Internet Computer</span>
+                            <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs font-mono">Rust</span>
+                            <span class="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs font-mono">DeFi</span>
+                        </div>
+                        <a href="https://github.com/dolr-ai" class="text-highlight hover:text-red-400 transition-colors font-medium text-sm">
+                            View Organization →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: SleepMate -->
+                <div class="bg-secondary border border-gray-700 rounded-2xl overflow-hidden hover:border-highlight/50 transition-all group">
+                    <div class="bg-gradient-to-br from-blue-600 to-cyan-700 h-48 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="relative z-10 text-center">
+                            <div class="text-5xl mb-2">😴</div>
+                            <div class="text-xl font-bold">SleepMate</div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">iOS Health App</h3>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
                             Comprehensive sleep tracking app with HealthKit integration, 
-                            circular time pickers, and advanced sleep analytics.
+                            circular time pickers, and advanced analytics.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Swift</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">HealthKit</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">SwiftUI</span>
+                            <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs font-mono">Swift</span>
+                            <span class="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs font-mono">HealthKit</span>
+                            <span class="bg-indigo-500/20 text-indigo-400 px-2 py-1 rounded text-xs font-mono">SwiftUI</span>
                         </div>
-                        <a href="https://github.com/gravityvi/SleepMate" class="text-primary hover:underline">View on GitHub →</a>
+                        <a href="https://github.com/gravityvi/SleepMate" class="text-highlight hover:text-red-400 transition-colors font-medium text-sm">
+                            View Project →
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 3: Blogtion -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="bg-gradient-to-br from-green-500 to-teal-600 h-48 flex items-center justify-center">
-                        <h3 class="text-white text-2xl font-bold">📝 Blogtion</h3>
+                <!-- Project 4: Hot-or-Not -->
+                <div class="bg-secondary border border-gray-700 rounded-2xl overflow-hidden hover:border-highlight/50 transition-all group">
+                    <div class="bg-gradient-to-br from-red-600 to-pink-700 h-48 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="relative z-10 text-center">
+                            <div class="text-5xl mb-2">🔥</div>
+                            <div class="text-xl font-bold">Hot-or-Not</div>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3">Notion to Blog Integration</h3>
-                        <p class="text-gray-600 mb-4">
-                            Integration between Notion and static blog generator websites. 
-                            Automated content publishing with 2 stars on GitHub.
+                        <h3 class="text-xl font-bold mb-3">Decentralized Backend</h3>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                            Backend canisters for decentralized social application 
+                            built on Internet Computer blockchain.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">JavaScript</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Notion API</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Static Sites</span>
+                            <span class="bg-orange-500/20 text-orange-400 px-2 py-1 rounded text-xs font-mono">Rust</span>
+                            <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs font-mono">IC Protocol</span>
+                            <span class="bg-pink-500/20 text-pink-400 px-2 py-1 rounded text-xs font-mono">Web3</span>
                         </div>
-                        <a href="https://github.com/gravityvi/Blogtion" class="text-primary hover:underline">View on GitHub →</a>
+                        <a href="https://github.com/ravi-sawlani-yral/hot-or-not-backend-canister" class="text-highlight hover:text-red-400 transition-colors font-medium text-sm">
+                            View Project →
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 4: ICP Ecosystem -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
-                        <h3 class="text-white text-2xl font-bold">🌐 ICP</h3>
+                <!-- Project 5: Blogtion -->
+                <div class="bg-secondary border border-gray-700 rounded-2xl overflow-hidden hover:border-highlight/50 transition-all group">
+                    <div class="bg-gradient-to-br from-green-600 to-teal-700 h-48 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="relative z-10 text-center">
+                            <div class="text-5xl mb-2">📝</div>
+                            <div class="text-xl font-bold">Blogtion</div>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3">Internet Computer Ecosystem</h3>
-                        <p class="text-gray-600 mb-4">
-                            Major contributor to dolr-ai organization and ICP ecosystem. 
-                            Deep expertise in developing and scaling services on Internet Computer canisters.
+                        <h3 class="text-xl font-bold mb-3">Content Integration</h3>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                            Seamless integration between Notion and static blog generators. 
+                            Automated content publishing workflow.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Internet Computer</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Rust Canisters</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">DeFi</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Scaling</span>
+                            <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs font-mono">JavaScript</span>
+                            <span class="bg-gray-500/20 text-gray-400 px-2 py-1 rounded text-xs font-mono">Notion API</span>
+                            <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs font-mono">Automation</span>
                         </div>
-                        <a href="https://github.com/dolr-ai" class="text-primary hover:underline">View Organization →</a>
-                    </div>
-                </div>
-                
-                <!-- Project 4: Hot-or-Not Backend -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="bg-gradient-to-br from-red-500 to-pink-600 h-48 flex items-center justify-center">
-                        <h3 class="text-white text-2xl font-bold">🔥 Hot-or-Not</h3>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3">Decentralized Backend</h3>
-                        <p class="text-gray-600 mb-4">
-                            Backend canisters for hot-or-not decentralized application 
-                            built on Internet Computer blockchain using Rust.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Rust</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">IC Protocol</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">DeFi</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Web3</span>
-                        </div>
-                        <a href="https://github.com/ravi-sawlani-yral/hot-or-not-backend-canister" class="text-primary hover:underline">View Project →</a>
+                        <a href="https://github.com/gravityvi/Blogtion" class="text-highlight hover:text-red-400 transition-colors font-medium text-sm">
+                            View Project →
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 5: Travis AI -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="bg-gradient-to-br from-cyan-500 to-blue-600 h-48 flex items-center justify-center">
-                        <h3 class="text-white text-2xl font-bold">Travis AI</h3>
+                <!-- Project 6: Enterprise Java -->
+                <div class="bg-secondary border border-gray-700 rounded-2xl overflow-hidden hover:border-highlight/50 transition-all group">
+                    <div class="bg-gradient-to-br from-blue-600 to-teal-700 h-48 flex items-center justify-center relative overflow-hidden">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                        <div class="relative z-10 text-center">
+                            <div class="text-5xl mb-2">☕</div>
+                            <div class="text-xl font-bold">Enterprise</div>
+                        </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3">AI Assistant Integration</h3>
-                        <p class="text-gray-600 mb-4">
-                            Personal AI assistant with WhatsApp integration, GitHub automation, 
-                            and project management capabilities.
+                        <h3 class="text-xl font-bold mb-3">Backend Systems</h3>
+                        <p class="text-gray-300 mb-4 text-sm leading-relaxed">
+                            Scalable taxi service backend and asset tracking systems 
+                            with enterprise-grade Java architecture.
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">OpenClaw</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">AI</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Automation</span>
+                            <span class="bg-orange-500/20 text-orange-400 px-2 py-1 rounded text-xs font-mono">Java</span>
+                            <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs font-mono">Spring</span>
+                            <span class="bg-blue-500/20 text-blue-400 px-2 py-1 rounded text-xs font-mono">Enterprise</span>
                         </div>
-                        <p class="text-gray-500">Private Project</p>
-                    </div>
-                </div>
-
-                <!-- Project 5: Travis AI -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="bg-gradient-to-br from-cyan-500 to-blue-600 h-48 flex items-center justify-center">
-                        <h3 class="text-white text-2xl font-bold">Travis AI</h3>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3">AI Assistant Integration</h3>
-                        <p class="text-gray-600 mb-4">
-                            Personal AI assistant with WhatsApp integration, GitHub automation, 
-                            and project management capabilities.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">OpenClaw</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">AI</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Automation</span>
-                        </div>
-                        <p class="text-gray-500">Private Project</p>
-                    </div>
-                </div>
-
-                <!-- Project 6: OCR & MATLAB -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="bg-gradient-to-br from-pink-500 to-purple-600 h-48 flex items-center justify-center">
-                        <h3 class="text-white text-2xl font-bold">OCR</h3>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3">Character Recognition</h3>
-                        <p class="text-gray-600 mb-4">
-                            Character recognition system using OCR technology 
-                            implemented in MATLAB for text extraction and processing.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">MATLAB</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">OCR</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Image Processing</span>
-                        </div>
-                        <a href="https://github.com/gravityvi/Character-Recognition-using-OCR" class="text-primary hover:underline">View on GitHub →</a>
-                    </div>
-                </div>
-
-                <!-- Project 6: OCR & MATLAB -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="bg-gradient-to-br from-pink-500 to-purple-600 h-48 flex items-center justify-center">
-                        <h3 class="text-white text-2xl font-bold">OCR</h3>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3">Character Recognition</h3>
-                        <p class="text-gray-600 mb-4">
-                            Character recognition system using OCR technology 
-                            implemented in MATLAB for text extraction and processing.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">MATLAB</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">OCR</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Image Processing</span>
-                        </div>
-                        <a href="https://github.com/gravityvi/Character-Recognition-using-OCR" class="text-primary hover:underline">View on GitHub →</a>
-                    </div>
-                </div>
-
-                <!-- Project 7: Data Structures -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-                    <div class="bg-gradient-to-br from-indigo-500 to-gray-600 h-48 flex items-center justify-center">
-                        <h3 class="text-white text-2xl font-bold">DSA</h3>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-3">Data Structures & Algorithms</h3>
-                        <p class="text-gray-600 mb-4">
-                            Implementation of binary search trees and fundamental 
-                            algorithms in C++, showcasing computer science fundamentals.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">C++</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Algorithms</span>
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">Data Structures</span>
-                        </div>
-                        <a href="https://github.com/gravityvi/binary-search-tree" class="text-primary hover:underline">View on GitHub →</a>
+                        <a href="https://github.com/gravityvi/Backend-for-Taxi-Service" class="text-highlight hover:text-red-400 transition-colors font-medium text-sm">
+                            View Projects →
+                        </a>
                     </div>
                 </div>
             </div>
@@ -330,146 +362,227 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
-                <p class="text-xl text-gray-600">Technologies I work with</p>
-            </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-                <div class="text-center">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">📱</span>
+    <section id="skills" class="py-20 bg-secondary">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16">
+                Technical <span class="text-highlight">Expertise</span>
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <div class="text-center group">
+                    <div class="bg-accent/50 border border-gray-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:border-highlight/50 transition-colors">
+                        <span class="text-3xl">🧪</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Mobile</h3>
-                    <p class="text-gray-600">Swift, iOS, HealthKit, SwiftUI</p>
+                    <h3 class="text-lg font-semibold mb-2">Testing & QA</h3>
+                    <p class="text-gray-400 text-sm font-mono">Nightwatch.js<br/>Selenium<br/>Automation</p>
                 </div>
-                <div class="text-center">
-                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🌐</span>
+                
+                <div class="text-center group">
+                    <div class="bg-accent/50 border border-gray-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:border-highlight/50 transition-colors">
+                        <span class="text-3xl">🌐</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Frontend</h3>
-                    <p class="text-gray-600">JavaScript, React, HTML/CSS, Tailwind</p>
+                    <h3 class="text-lg font-semibold mb-2">ICP Ecosystem</h3>
+                    <p class="text-gray-400 text-sm font-mono">Internet Computer<br/>Canisters<br/>DeFi</p>
                 </div>
-                <div class="text-center">
-                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🌐</span>
+                
+                <div class="text-center group">
+                    <div class="bg-accent/50 border border-gray-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:border-highlight/50 transition-colors">
+                        <span class="text-3xl">🦀</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">ICP Ecosystem</h3>
-                    <p class="text-gray-600">Internet Computer, Canisters, DeFi, Scaling</p>
+                    <h3 class="text-lg font-semibold mb-2">Rust Systems</h3>
+                    <p class="text-gray-400 text-sm font-mono">Backend<br/>Performance<br/>Security</p>
                 </div>
-                <div class="text-center">
-                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🦀</span>
+                
+                <div class="text-center group">
+                    <div class="bg-accent/50 border border-gray-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:border-highlight/50 transition-colors">
+                        <span class="text-3xl">📱</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Rust Systems</h3>
-                    <p class="text-gray-600">Rust, Backend Canisters, Performance, Security</p>
+                    <h3 class="text-lg font-semibold mb-2">Mobile Dev</h3>
+                    <p class="text-gray-400 text-sm font-mono">Swift<br/>iOS<br/>SwiftUI</p>
                 </div>
-                <div class="text-center">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">🧪</span>
+                
+                <div class="text-center group">
+                    <div class="bg-accent/50 border border-gray-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:border-highlight/50 transition-colors">
+                        <span class="text-3xl">⚡</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Testing & QA</h3>
-                    <p class="text-gray-600">Nightwatch.js, Selenium, Automation, E2E Testing</p>
+                    <h3 class="text-lg font-semibold mb-2">Frontend</h3>
+                    <p class="text-gray-400 text-sm font-mono">JavaScript<br/>React<br/>Tailwind</p>
                 </div>
-                <div class="text-center">
-                    <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl">☕</span>
+                
+                <div class="text-center group">
+                    <div class="bg-accent/50 border border-gray-600 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:border-highlight/50 transition-colors">
+                        <span class="text-3xl">☕</span>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2">Enterprise Java</h3>
-                    <p class="text-gray-600">Java, Spring, Enterprise Systems, APIs</p>
+                    <h3 class="text-lg font-semibold mb-2">Enterprise</h3>
+                    <p class="text-gray-400 text-sm font-mono">Java<br/>Spring<br/>APIs</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Calendar Booking Section -->
-    <section id="book" class="py-20 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Book a Consultation</h2>
-                <p class="text-xl text-gray-600">
-                    Let's discuss your project and see how I can help bring your ideas to life
-                </p>
-            </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-8">
+                Let's Build Something <span class="text-highlight">Amazing</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-12 leading-relaxed">
+                Ready to bring your ideas to life? I'm available for freelance projects, 
+                open-source collaborations, and technical consulting.
+            </p>
             
-            <!-- Calendly Integration -->
-            <div class="bg-white rounded-xl shadow-lg p-8">
-                <div class="text-center mb-6">
-                    <h3 class="text-2xl font-semibold mb-4">Schedule a Free Consultation</h3>
-                    <p class="text-gray-600">
-                        Choose a time that works for you. We'll discuss your project requirements and how I can help.
-                    </p>
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-secondary border border-gray-700 rounded-2xl p-6">
+                    <div class="text-3xl mb-4">📧</div>
+                    <h3 class="text-lg font-semibold mb-2">Email</h3>
+                    <p class="text-gray-400 font-mono text-sm">ravisawlani04@gmail.com</p>
                 </div>
                 
-                <!-- Calendly Inline Widget -->
-                <div class="calendly-inline-widget" 
-                     data-url="https://calendly.com/your-calendly-username/30min" 
-                     style="min-width:320px;height:630px;">
+                <div class="bg-secondary border border-gray-700 rounded-2xl p-6">
+                    <div class="text-3xl mb-4">📱</div>
+                    <h3 class="text-lg font-semibold mb-2">WhatsApp</h3>
+                    <p class="text-gray-400 font-mono text-sm">+91 735 423 4334</p>
                 </div>
                 
-                <!-- Alternative: Calendly Popup Button -->
-                <div class="text-center mt-8">
-                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/your-calendly-username/30min'});return false;" 
-                       class="bg-primary text-white px-8 py-3 rounded-lg text-lg hover:bg-blue-700 transition">
-                        Schedule Meeting
-                    </a>
+                <div class="bg-secondary border border-gray-700 rounded-2xl p-6">
+                    <div class="text-3xl mb-4">💼</div>
+                    <h3 class="text-lg font-semibold mb-2">LinkedIn</h3>
+                    <p class="text-gray-400 font-mono text-sm">Connect with me</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Contact Info -->
-            <div class="mt-12 text-center">
-                <h3 class="text-xl font-semibold mb-4">Other Ways to Reach Me</h3>
-                <div class="flex justify-center space-x-8">
-                    <div>
-                        <p class="text-gray-600">Email</p>
-                        <p class="font-semibold">ravi@example.com</p>
-                    </div>
-                    <div>
-                        <p class="text-gray-600">WhatsApp</p>
-                        <p class="font-semibold">+91 70436 14334</p>
-                    </div>
+    <!-- Book Meeting Section -->
+    <section id="book" class="py-20 bg-accent">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-8">
+                Schedule a <span class="text-highlight">Consultation</span>
+            </h2>
+            <p class="text-xl text-gray-300 mb-12">
+                Book a free 30-minute consultation to discuss your project requirements.
+            </p>
+            
+            <div class="bg-secondary border border-gray-700 rounded-2xl p-8 max-w-2xl mx-auto">
+                <div class="mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">What We'll Discuss</h3>
+                    <ul class="text-left text-gray-300 space-y-3">
+                        <li class="flex items-center">
+                            <span class="text-highlight mr-3">✓</span>
+                            Your project goals and requirements
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-highlight mr-3">✓</span>
+                            Technical architecture and approach
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-highlight mr-3">✓</span>
+                            Timeline and budget estimation
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-highlight mr-3">✓</span>
+                            Next steps and collaboration process
+                        </li>
+                    </ul>
                 </div>
+                
+                <a href="https://calendly.com/ravisawlani04/consultation" 
+                   class="bg-highlight text-white px-8 py-4 rounded-lg text-lg hover:bg-red-600 transition-all transform hover:scale-105 font-medium inline-block">
+                    Book Free Consultation
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center">
-                <h3 class="text-2xl font-bold mb-4">Ravi Sawlani</h3>
-                <p class="text-gray-400 mb-6">Full Stack Developer & Freelancer</p>
-                <div class="flex justify-center space-x-6 mb-6">
-                    <a href="https://github.com/gravityvi" class="text-gray-400 hover:text-white">GitHub (Main)</a>
-                    <a href="https://github.com/ravi-sawlani-yral" class="text-gray-400 hover:text-white">GitHub (Work)</a>
-                    <a href="#" class="text-gray-400 hover:text-white">LinkedIn</a>
-                    <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+    <footer class="bg-primary border-t border-gray-800 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-2xl font-bold font-mono mb-4 md:mb-0">
+                    <span class="text-white">ravi</span><span class="text-highlight">.</span><span class="text-gray-400">dev</span>
                 </div>
-                <p class="text-gray-500">&copy; 2026 Ravi Sawlani. All rights reserved.</p>
+                
+                <div class="flex space-x-6">
+                    <a href="https://github.com/gravityvi" class="text-gray-400 hover:text-white transition-colors">
+                        GitHub
+                    </a>
+                    <a href="https://github.com/ravi-sawlani-yral" class="text-gray-400 hover:text-white transition-colors">
+                        Work GitHub
+                    </a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition-colors">
+                        Contact
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2026 Ravi Sawlani. Open-source maintainer and blockchain expert.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Calendly JavaScript -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    
-    <!-- Smooth Scrolling -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+    <!-- Custom Styles -->
+    <style>
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
         
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .font-mono {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script>
         // Mobile menu toggle
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
         }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('backdrop-blur-md');
+                nav.classList.add('bg-primary/95');
+            } else {
+                nav.classList.remove('backdrop-blur-md');
+                nav.classList.remove('bg-primary/95');
+            }
+        });
     </script>
 </body>
 </html>
