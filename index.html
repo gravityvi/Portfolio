@@ -7,17 +7,41 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1a1a2e',
-                        secondary: '#16213e',
-                        accent: '#0f3460',
-                        highlight: '#e94560'
+                        primary: '#0a0a0f',
+                        secondary: '#121218',
+                        tertiary: '#1a1a22',
+                        accent: '#0f1419',
+                        highlight: '#ff6b5a',
+                        glow: '#00d9ff',
+                        success: '#00f5a0',
+                        warning: '#ffb347',
+                        glass: 'rgba(255, 255, 255, 0.02)'
                     },
                     fontFamily: {
-                        'mono': ['JetBrains Mono', 'Courier New', 'monospace'],
-                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                        'mono': ['JetBrains Mono', 'Fira Code', 'Courier New', 'monospace'],
+                        'sans': ['Inter', 'SF Pro Display', 'system-ui', 'sans-serif'],
+                        'display': ['Outfit', 'Inter', 'sans-serif']
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'gradient-xy': 'gradient-xy 15s ease infinite',
+                        'text-shimmer': 'text-shimmer 2.5s linear infinite',
+                        'spin-slow': 'spin 20s linear infinite',
+                        'bounce-slow': 'bounce 3s infinite'
+                    },
+                    backdropBlur: {
+                        xs: '2px',
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+                        'glass-lg': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+                        'neon': '0 0 20px theme(colors.highlight), 0 0 40px theme(colors.highlight), 0 0 80px theme(colors.highlight)',
+                        'glow': '0 0 20px theme(colors.glow)'
                     }
                 }
             }
@@ -25,30 +49,112 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Modern Meta Tags -->
+    <meta name="description" content="Ravi Sawlani - Open-source maintainer of Nightwatch.js, ICP ecosystem expert, and full-stack developer available for freelance work in Bengaluru, India.">
+    <meta name="keywords" content="Ravi Sawlani, Full-stack Developer, Nightwatch.js, Internet Computer, ICP, Blockchain, Rust, JavaScript, Swift, Java, Freelancer, Open Source">
+    <meta name="author" content="Ravi Sawlani">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gravityvi.github.io/Portfolio/">
+    <meta property="og:title" content="Ravi Sawlani - Full-Stack Developer & Blockchain Expert">
+    <meta property="og:description" content="Open-source maintainer of Nightwatch.js, ICP ecosystem expert, and full-stack developer available for freelance work.">
+    <meta property="og:image" content="https://gravityvi.github.io/Portfolio/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gravityvi.github.io/Portfolio/">
+    <meta property="twitter:title" content="Ravi Sawlani - Full-Stack Developer & Blockchain Expert">
+    <meta property="twitter:description" content="Open-source maintainer of Nightwatch.js, ICP ecosystem expert, and full-stack developer available for freelance work.">
+    <meta property="twitter:image" content="https://gravityvi.github.io/Portfolio/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    
+    <!-- Performance Hints -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="preconnect" href="https://api.github.com">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ravi Sawlani",
+        "jobTitle": "Full-Stack Developer & Open Source Maintainer",
+        "description": "Open-source maintainer of Nightwatch.js, ICP ecosystem expert, and full-stack developer",
+        "url": "https://gravityvi.github.io/Portfolio/",
+        "sameAs": [
+            "https://github.com/gravityvi",
+            "https://github.com/nightwatchjs/nightwatch",
+            "https://github.com/dolr-ai"
+        ],
+        "knowsAbout": [
+            "JavaScript", "Rust", "Swift", "Java", "Blockchain", "Internet Computer", 
+            "Testing Automation", "Full-Stack Development", "Open Source"
+        ],
+        "workLocation": {
+            "@type": "City",
+            "name": "Bengaluru, India"
+        }
+    }
+    </script>
 </head>
-<body class="bg-primary text-white overflow-x-hidden">
+<body class="bg-primary text-white overflow-x-hidden font-sans">
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 bg-primary/90 backdrop-blur-sm border-b border-gray-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold font-mono">
-                    <span class="text-white">ravi</span><span class="text-highlight">.</span><span class="text-gray-400">dev</span>
+                <div class="text-2xl font-bold font-mono group cursor-pointer">
+                    <span class="text-white group-hover:text-glow transition-colors duration-300">ravi</span>
+                    <span class="text-highlight animate-pulse">.</span>
+                    <span class="text-gray-400 group-hover:text-white transition-colors duration-300">dev</span>
                 </div>
                 
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a>
-                    <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
-                    <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Work</a>
-                    <a href="#skills" class="text-gray-300 hover:text-white transition-colors">Skills</a>
-                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
-                    <a href="#book" class="bg-highlight text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">Hire Me</a>
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-1">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-all relative group">
+                        Home
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-all relative group">
+                        About
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="#experience" class="nav-link text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-all relative group">
+                        Experience
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-all relative group">
+                        Projects
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-all relative group">
+                        Skills
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="#testimonials" class="nav-link text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-all relative group">
+                        Testimonials
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-all relative group">
+                        Contact
+                        <span class="nav-indicator"></span>
+                    </a>
+                    <a href="#hire" class="ml-4 bg-gradient-to-r from-highlight to-orange-500 hover:from-orange-500 hover:to-highlight text-white px-6 py-2.5 rounded-full font-medium transition-all transform hover:scale-105 shadow-lg hover:shadow-neon">
+                        🚀 Hire Me
+                    </a>
                 </div>
                 
                 <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="lg:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white p-2 rounded-lg hover:bg-glass transition-all" aria-label="Toggle menu">
+                        <svg class="w-6 h-6 transition-transform duration-300" id="menuIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
@@ -56,14 +162,20 @@
             </div>
             
             <!-- Mobile menu -->
-            <div id="mobileMenu" class="hidden md:hidden bg-secondary border-t border-gray-800">
-                <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white">Home</a>
-                    <a href="#about" class="block px-3 py-2 text-gray-300 hover:text-white">About</a>
-                    <a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-white">Work</a>
-                    <a href="#skills" class="block px-3 py-2 text-gray-300 hover:text-white">Skills</a>
-                    <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white">Contact</a>
-                    <a href="#book" class="block mx-3 my-2 bg-highlight text-white px-4 py-2 rounded-lg text-center hover:bg-red-600">Hire Me</a>
+            <div id="mobileMenu" class="lg:hidden opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-xl mx-4 mb-4">
+                    <div class="px-4 py-3 space-y-1">
+                        <a href="#home" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-glass rounded-lg transition-all">Home</a>
+                        <a href="#about" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-glass rounded-lg transition-all">About</a>
+                        <a href="#experience" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-glass rounded-lg transition-all">Experience</a>
+                        <a href="#projects" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-glass rounded-lg transition-all">Projects</a>
+                        <a href="#skills" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-glass rounded-lg transition-all">Skills</a>
+                        <a href="#testimonials" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-glass rounded-lg transition-all">Testimonials</a>
+                        <a href="#contact" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-glass rounded-lg transition-all">Contact</a>
+                        <a href="#hire" class="block mx-4 my-3 bg-gradient-to-r from-highlight to-orange-500 text-white px-4 py-3 rounded-lg text-center font-medium hover:shadow-neon transition-all">
+                            🚀 Hire Me
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,145 +183,360 @@
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <!-- Animated background -->
+        <!-- Advanced Background Effects -->
         <div class="absolute inset-0 z-0">
+            <!-- Gradient Mesh Background -->
             <div class="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent"></div>
-            <div class="absolute inset-0 opacity-10">
-                <div class="grid-pattern"></div>
+            <div class="absolute inset-0 bg-gradient-to-tl from-highlight/5 via-transparent to-glow/5 animate-gradient-xy"></div>
+            
+            <!-- Geometric Patterns -->
+            <div class="absolute inset-0 opacity-5">
+                <div class="geometric-pattern"></div>
             </div>
-            <!-- Floating particles -->
-            <div class="floating-particles">
-                <div class="particle particle-1"></div>
-                <div class="particle particle-2"></div>
-                <div class="particle particle-3"></div>
-                <div class="particle particle-4"></div>
-                <div class="particle particle-5"></div>
-                <div class="particle particle-6"></div>
-                <div class="particle particle-7"></div>
-                <div class="particle particle-8"></div>
+            
+            <!-- Advanced Particle System -->
+            <div class="absolute inset-0">
+                <div class="floating-orbs">
+                    <div class="orb orb-1"></div>
+                    <div class="orb orb-2"></div>
+                    <div class="orb orb-3"></div>
+                    <div class="orb orb-4"></div>
+                    <div class="orb orb-5"></div>
+                    <div class="orb orb-6"></div>
+                </div>
             </div>
-            <!-- Interactive mouse trail -->
+            
+            <!-- Interactive Grid -->
+            <div class="interactive-grid opacity-20"></div>
+            
+            <!-- Mouse Trail Canvas -->
             <canvas id="mouseTrail" class="absolute inset-0 pointer-events-none"></canvas>
+            
+            <!-- Ambient Light Effect -->
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-glow/10 rounded-full blur-3xl animate-pulse-glow"></div>
         </div>
         
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center">
+                <!-- Status Badge -->
+                <div class="inline-flex items-center space-x-2 bg-glass backdrop-blur-xl border border-success/30 rounded-full px-4 py-2 mb-8 group hover:border-success/50 transition-all">
+                    <div class="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                    <span class="text-success text-sm font-medium">Available for Freelance Projects</span>
+                </div>
+                
+                <!-- Main Heading with Advanced Typography -->
                 <div class="mb-8">
-                    <p class="text-highlight font-mono text-lg mb-4">Hello, I'm</p>
-                    <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                        <span class="text-white">Ravi</span>
-                        <span class="text-highlight">.</span>
-                    </h1>
-                    <p class="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
-                        Open-Source Maintainer & Blockchain Expert
+                    <p class="text-highlight font-mono text-lg mb-4 animate-float">
+                        <span class="typing-text">console.log("Hello, World! 👋")</span>
                     </p>
+                    <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight">
+                        <span class="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-text-shimmer bg-[length:200%_200%]">
+                            Ravi
+                        </span>
+                        <span class="text-highlight animate-bounce-slow inline-block">.</span>
+                        <br>
+                        <span class="text-glow font-display">Sawlani</span>
+                    </h1>
+                    
+                    <!-- Dynamic Role Switcher -->
+                    <div class="text-2xl md:text-4xl text-gray-300 mb-8 font-light">
+                        <span class="text-white">I'm a </span>
+                        <span class="role-switcher text-highlight font-medium" data-roles='["Open-Source Maintainer", "Blockchain Expert", "Full-Stack Developer", "Technical Architect", "Code Craftsman"]'></span>
+                        <span class="animate-pulse">|</span>
+                    </div>
+                    
+                    <!-- Enhanced Achievement Tags -->
                     <div class="flex flex-wrap justify-center gap-4 mb-12">
-                        <span class="bg-accent/50 border border-gray-600 px-4 py-2 rounded-full text-sm font-mono">
-                            Nightwatch.js Maintainer
-                        </span>
-                        <span class="bg-accent/50 border border-gray-600 px-4 py-2 rounded-full text-sm font-mono">
-                            ICP Ecosystem Expert
-                        </span>
-                        <span class="bg-accent/50 border border-gray-600 px-4 py-2 rounded-full text-sm font-mono">
-                            Full-Stack Developer
-                        </span>
+                        <div class="achievement-tag bg-glass backdrop-blur-xl border border-yellow-400/30 px-6 py-3 rounded-full hover:border-yellow-400/60 transition-all group">
+                            <span class="text-yellow-400 text-sm font-medium">⭐ Nightwatch.js Maintainer</span>
+                            <div class="text-xs text-gray-400 mt-1">11.9k+ GitHub Stars</div>
+                        </div>
+                        <div class="achievement-tag bg-glass backdrop-blur-xl border border-orange-400/30 px-6 py-3 rounded-full hover:border-orange-400/60 transition-all group">
+                            <span class="text-orange-400 text-sm font-medium">🌐 ICP Ecosystem Expert</span>
+                            <div class="text-xs text-gray-400 mt-1">Major Contributor</div>
+                        </div>
+                        <div class="achievement-tag bg-glass backdrop-blur-xl border border-blue-400/30 px-6 py-3 rounded-full hover:border-blue-400/60 transition-all group">
+                            <span class="text-blue-400 text-sm font-medium">💻 Full-Stack Mastery</span>
+                            <div class="text-xs text-gray-400 mt-1">Rust • JS • Swift • Java</div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row justify-center">
-                    <a href="#projects" class="bg-highlight text-white px-8 py-4 rounded-lg text-lg hover:bg-red-600 transition-all transform hover:scale-105 font-medium">
-                        View My Work
+                <!-- Call-to-Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="#projects" class="group relative overflow-hidden bg-gradient-to-r from-highlight to-orange-500 hover:from-orange-500 hover:to-highlight text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all transform hover:scale-105 shadow-2xl hover:shadow-neon">
+                        <span class="relative z-10 flex items-center">
+                            🚀 Explore My Work
+                            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </span>
+                        <div class="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 skew-x-12"></div>
                     </a>
-                    <a href="#contact" class="border-2 border-gray-600 text-white px-8 py-4 rounded-lg text-lg hover:border-highlight hover:text-highlight transition-all font-medium">
-                        Get In Touch
+                    
+                    <a href="#contact" class="group relative bg-glass backdrop-blur-xl border-2 border-gray-600/50 hover:border-glow/50 text-white px-8 py-4 rounded-2xl text-lg font-semibold transition-all hover:shadow-glow">
+                        <span class="flex items-center">
+                            💬 Let's Connect
+                            <svg class="ml-2 w-5 h-5 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                        </span>
                     </a>
+                    
+                    <!-- GitHub Stats Mini Card -->
+                    <div class="bg-glass backdrop-blur-xl border border-gray-600/30 rounded-2xl px-6 py-4 hover:border-gray-500/50 transition-all group cursor-pointer" onclick="window.open('https://github.com/gravityvi', '_blank')">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-gray-300 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            <div class="text-left">
+                                <div class="text-sm text-gray-300">GitHub</div>
+                                <div class="text-xs text-gray-400">@gravityvi</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Proof Metrics -->
+                <div class="grid grid-cols-3 gap-8 mt-16 max-w-2xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-glow counter" data-target="11900">0</div>
+                        <div class="text-sm text-gray-400 mt-1">GitHub Stars</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-highlight counter" data-target="227">0</div>
+                        <div class="text-sm text-gray-400 mt-1">Contributions</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-success counter" data-target="5">0</div>
+                        <div class="text-sm text-gray-400 mt-1">Years Experience</div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 animate-bounce">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
+        <!-- Enhanced Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <div class="flex flex-col items-center text-gray-400 animate-bounce cursor-pointer" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+                <span class="text-xs mb-2 font-mono">Scroll to explore</span>
+                <div class="w-6 h-10 border-2 border-gray-600 rounded-full relative">
+                    <div class="w-1 h-3 bg-highlight rounded-full absolute top-2 left-1/2 transform -translate-x-1/2 animate-bounce"></div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-secondary">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold mb-8">
-                        <span class="text-highlight">About</span> Me
-                    </h2>
-                    <div class="space-y-6 text-gray-300 leading-relaxed">
-                        <p class="text-lg">
-                            I'm a <span class="text-white font-medium">freelance full-stack developer</span> and 
-                            <span class="text-highlight font-medium">open-source maintainer</span> from Bengaluru, India.
+    <section id="about" class="relative py-24 bg-gradient-to-br from-secondary via-tertiary to-secondary overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-64 h-64 bg-highlight/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-80 h-80 bg-glow/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-20">
+                <h2 class="text-5xl lg:text-6xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">About</span>
+                    <span class="text-highlight">.</span>
+                    <span class="text-glow font-display">me</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Crafting digital experiences at the intersection of 
+                    <span class="text-highlight font-medium">open-source innovation</span> and 
+                    <span class="text-glow font-medium">blockchain technology</span>
+                </p>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-20">
+                <!-- Left Column: Story & Bio -->
+                <div class="space-y-8">
+                    <div class="prose prose-lg text-gray-300 leading-relaxed">
+                        <p class="text-xl mb-6 text-white/90">
+                            I'm <span class="text-highlight font-semibold">Ravi Sawlani</span>, a 
+                            <span class="text-glow font-medium">full-stack developer</span> and 
+                            <span class="text-highlight font-medium">open-source maintainer</span> 
+                            based in the vibrant tech hub of Bengaluru, India.
                         </p>
-                        <p>
-                            As a <span class="text-white font-medium">maintainer of Nightwatch.js</span> (11.9k+ stars), 
-                            I lead development of one of the most popular testing frameworks in the JavaScript ecosystem.
+                        
+                        <p class="mb-6">
+                            As the <span class="text-white font-medium">lead maintainer of Nightwatch.js</span> 
+                            — one of the most trusted end-to-end testing frameworks with <strong class="text-yellow-400">11.9k+ GitHub stars</strong> 
+                            — I help shape the future of web testing for developers worldwide.
                         </p>
-                        <p>
-                            I'm also a <span class="text-white font-medium">major contributor to the dolr-ai organization</span> 
-                            and have deep expertise in the <span class="text-highlight font-medium">Internet Computer ecosystem</span>, 
-                            developing and scaling services on ICP canisters at enterprise level.
+                        
+                        <p class="mb-6">
+                            My journey in <span class="text-orange-400 font-medium">blockchain technology</span> 
+                            runs deep, particularly within the <strong class="text-white">Internet Computer ecosystem</strong>. 
+                            As a major contributor to the <span class="text-glow font-medium">dolr-ai organization</span>, 
+                            I architect and scale enterprise-grade services on ICP canisters.
                         </p>
+                        
                         <p>
-                            Currently building innovative applications across mobile and blockchain platforms, 
-                            with a focus on <span class="text-white font-medium">Rust systems programming</span> 
-                            and <span class="text-white font-medium">testing automation</span>.
+                            When I'm not maintaining open-source projects, I'm building innovative applications 
+                            across mobile and blockchain platforms, with a passion for 
+                            <span class="text-red-400 font-medium">Rust systems programming</span> and 
+                            <span class="text-blue-400 font-medium">automated testing solutions</span>.
                         </p>
                     </div>
                     
-                    <div class="mt-8 flex flex-wrap gap-3">
-                        <span class="bg-highlight/20 border border-highlight/50 text-highlight px-3 py-1 rounded-full text-sm font-mono">Open Source Leader</span>
-                        <span class="bg-blue-500/20 border border-blue-500/50 text-blue-400 px-3 py-1 rounded-full text-sm font-mono">ICP Expert</span>
-                        <span class="bg-purple-500/20 border border-purple-500/50 text-purple-400 px-3 py-1 rounded-full text-sm font-mono">Testing Automation</span>
-                        <span class="bg-orange-500/20 border border-orange-500/50 text-orange-400 px-3 py-1 rounded-full text-sm font-mono">Blockchain Systems</span>
+                    <!-- Key Highlights -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-highlight/50 transition-all group">
+                            <div class="text-3xl mb-2">🚀</div>
+                            <div class="text-2xl font-bold text-white mb-1">5+</div>
+                            <div class="text-sm text-gray-400">Years Experience</div>
+                        </div>
+                        <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-glow/50 transition-all group">
+                            <div class="text-3xl mb-2">⭐</div>
+                            <div class="text-2xl font-bold text-glow mb-1">11.9k+</div>
+                            <div class="text-sm text-gray-400">GitHub Stars</div>
+                        </div>
                     </div>
+                </div>
+
+                <!-- Right Column: Interactive Status & Tech Stack -->
+                <div class="space-y-8">
+                    <!-- Live Status Terminal -->
+                    <div class="bg-black/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl overflow-hidden hover:border-success/50 transition-all group">
+                        <div class="flex items-center px-6 py-4 bg-gray-900/50 border-b border-gray-700/50">
+                            <div class="flex space-x-2">
+                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            </div>
+                            <div class="ml-4 text-sm text-gray-400 font-mono">~/ravi-dev-status</div>
+                        </div>
+                        <div class="p-6 space-y-4 font-mono text-sm">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                                <span class="text-success">Available for freelance projects</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                                <span class="text-blue-400">Maintaining Nightwatch.js actively</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                                <span class="text-purple-400">Building on Internet Computer</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+                                <span class="text-orange-400">Developing SleepMate iOS app</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+                                <span class="text-yellow-400">Learning cutting-edge tech daily</span>
+                            </div>
+                            
+                            <!-- Terminal Command Line -->
+                            <div class="mt-6 pt-4 border-t border-gray-700/50">
+                                <div class="flex items-center">
+                                    <span class="text-highlight mr-2">$</span>
+                                    <span class="text-white typing-terminal">hire-ravi --expertise="full-stack" --availability="now"</span>
+                                    <span class="animate-pulse">|</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Expertise Visualization -->
+                    <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all">
+                        <h3 class="text-xl font-bold mb-6 text-white">Core Expertise</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center group cursor-pointer">
+                                <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-2xl">⚡</span>
+                                </div>
+                                <div class="text-sm font-medium text-white">JavaScript</div>
+                                <div class="text-xs text-yellow-400">Expert</div>
+                            </div>
+                            <div class="text-center group cursor-pointer">
+                                <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-red-500/20 to-orange-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-2xl">🦀</span>
+                                </div>
+                                <div class="text-sm font-medium text-white">Rust</div>
+                                <div class="text-xs text-red-400">Advanced</div>
+                            </div>
+                            <div class="text-center group cursor-pointer">
+                                <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-2xl">📱</span>
+                                </div>
+                                <div class="text-sm font-medium text-white">Swift</div>
+                                <div class="text-xs text-blue-400">Proficient</div>
+                            </div>
+                            <div class="text-center group cursor-pointer">
+                                <div class="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <span class="text-2xl">☕</span>
+                                </div>
+                                <div class="text-sm font-medium text-white">Java</div>
+                                <div class="text-xs text-orange-400">Proficient</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievement Showcase -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 text-center hover:border-yellow-500/50 transition-all group">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                    </div>
+                    <div class="text-2xl font-bold text-white mb-2">Open Source Leader</div>
+                    <div class="text-gray-400">Maintaining critical infrastructure used by thousands of developers worldwide</div>
                 </div>
                 
-                <div class="relative">
-                    <div class="bg-accent/50 border border-gray-600 rounded-2xl p-8 backdrop-blur-sm transform hover:scale-105 transition-all duration-300 hover:border-highlight/50">
-                        <div class="font-mono text-sm text-gray-400 mb-4">~/current-status</div>
-                        <div class="space-y-3 text-sm">
-                            <div class="flex items-center status-item">
-                                <span class="status-dot bg-green-400 mr-3"></span>
-                                <span class="text-white">Available for freelance projects</span>
-                            </div>
-                            <div class="flex items-center status-item">
-                                <span class="status-dot bg-blue-400 mr-3"></span>
-                                <span class="text-white">Maintaining Nightwatch.js</span>
-                            </div>
-                            <div class="flex items-center status-item">
-                                <span class="status-dot bg-purple-400 mr-3"></span>
-                                <span class="text-white">Building on Internet Computer</span>
-                            </div>
-                            <div class="flex items-center status-item">
-                                <span class="status-dot bg-orange-400 mr-3"></span>
-                                <span class="text-white">Developing SleepMate iOS app</span>
-                            </div>
-                        </div>
+                <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 text-center hover:border-orange-500/50 transition-all group">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-10 h-10 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 11 5.16-1.261 9-5.45 9-11V7l-10-5z"/>
+                        </svg>
                     </div>
-                    <!-- Floating code snippets -->
-                    <div class="code-float code-float-1">
-                        <div class="bg-black/20 backdrop-blur-sm border border-gray-700 rounded-lg p-3 text-xs font-mono text-green-400">
-                            <div class="opacity-60">fn main() {</div>
-                            <div class="ml-4">println!("Hello, World!");</div>
-                            <div class="opacity-60">}</div>
-                        </div>
-                    </div>
-                    <div class="code-float code-float-2">
-                        <div class="bg-black/20 backdrop-blur-sm border border-gray-700 rounded-lg p-3 text-xs font-mono text-blue-400">
-                            <div class="opacity-60">test('E2E', async () => {</div>
-                            <div class="ml-4">await browser.url('/app');</div>
-                            <div class="opacity-60">});</div>
-                        </div>
-                    </div>
+                    <div class="text-2xl font-bold text-white mb-2">Blockchain Expert</div>
+                    <div class="text-gray-400">Deep expertise in Internet Computer Protocol and decentralized systems</div>
                 </div>
+                
+                <div class="bg-glass backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 text-center hover:border-glow/50 transition-all group">
+                    <div class="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-glow/20 to-blue-500/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg class="w-10 h-10 text-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="text-2xl font-bold text-white mb-2">Testing Automation</div>
+                    <div class="text-gray-400">Pioneering advanced testing frameworks and CI/CD automation solutions</div>
+                </div>
+            </div>
+
+            <!-- Expertise Tags Cloud -->
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="bg-highlight/10 border border-highlight/30 text-highlight px-4 py-2 rounded-full text-sm font-medium hover:border-highlight/60 hover:bg-highlight/20 transition-all cursor-pointer">Open Source Maintainer</span>
+                <span class="bg-glow/10 border border-glow/30 text-glow px-4 py-2 rounded-full text-sm font-medium hover:border-glow/60 hover:bg-glow/20 transition-all cursor-pointer">ICP Expert</span>
+                <span class="bg-purple-500/10 border border-purple-500/30 text-purple-400 px-4 py-2 rounded-full text-sm font-medium hover:border-purple-500/60 hover:bg-purple-500/20 transition-all cursor-pointer">Testing Automation</span>
+                <span class="bg-orange-500/10 border border-orange-500/30 text-orange-400 px-4 py-2 rounded-full text-sm font-medium hover:border-orange-500/60 hover:bg-orange-500/20 transition-all cursor-pointer">Blockchain Systems</span>
+                <span class="bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium hover:border-yellow-500/60 hover:bg-yellow-500/20 transition-all cursor-pointer">Full-Stack Development</span>
+                <span class="bg-green-500/10 border border-green-500/30 text-green-400 px-4 py-2 rounded-full text-sm font-medium hover:border-green-500/60 hover:bg-green-500/20 transition-all cursor-pointer">Mobile Development</span>
+                <span class="bg-blue-500/10 border border-blue-500/30 text-blue-400 px-4 py-2 rounded-full text-sm font-medium hover:border-blue-500/60 hover:bg-blue-500/20 transition-all cursor-pointer">Systems Programming</span>
+            </div>
+        </div>
+        
+        <!-- Floating Code Elements -->
+        <div class="absolute top-32 left-8 opacity-20 pointer-events-none">
+            <div class="bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 font-mono text-xs text-green-400 animate-float">
+                <div class="opacity-60">impl Developer for Ravi {</div>
+                <div class="ml-4">fn code() -> Quality;</div>
+                <div class="opacity-60">}</div>
+            </div>
+        </div>
+        <div class="absolute bottom-32 right-8 opacity-20 pointer-events-none">
+            <div class="bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 font-mono text-xs text-blue-400 animate-float" style="animation-delay: 1s">
+                <div class="opacity-60">const impact = await</div>
+                <div class="ml-4">nightwatch.test();</div>
+                <div class="opacity-60">// ✅ 11.9k+ stars</div>
             </div>
         </div>
     </section>
